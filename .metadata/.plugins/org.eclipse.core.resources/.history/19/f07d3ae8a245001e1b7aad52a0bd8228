@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/homepagestyles.css">
+    <title>Basic Calculation</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Basic Calculation</h1>
+        <form method="post" th:action="@{/calculate}">
+            <label for="operand1">Operand 1</label>
+            <input type="number" step="any" id="operand1" name="operand1" required>
+            
+            <label for="operator">Operator</label>
+            <input type="text" id="operator" name="operator" required>
+            
+            <label for="operand2">Operand 2</label>
+            <input type="number" step="any" id="operand2" name="operand2" required>
+            
+            <button type="submit">Calculate</button>
+        </form>
+        
+        <div th:if="${result != null}">
+            <h2>Result:</h2>
+            <p th:text="${result}"></p>
+        </div>
+    </div>
+</body>
+</html>

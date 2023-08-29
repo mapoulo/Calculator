@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles.css">
+    <title>Basic Calculation</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Basic Calculation</h1>
+      
+          <!-- Calculation Form -->
+    <form method="post" th:action="@{/performCalculation}">
+        <label for="operand1">Operand 1:</label>
+        <input type="number"  step="any" name="operand1" required>
+        
+        <label for="operand2">Operand 2:</label>
+        <input type="number"  step="any" name="operand2" required>
+        
+        <label for="operator">Operator:</label>
+        <input type="text" name="operator" required>
+        
+        <button type="submit" class="login-btn" >Calculate</button>
+        <button type="button" class="login-btn" th:onclick="|window.location.href='/advanced'|" >Advanced</button>
+        <button type="button" class="login-btn" th:onclick="|window.location.href='/audit-log'|" >Audit</button>
+
+    </form>
+    
+    <!-- Display Calculation Result -->
+    <div th:if="${result != null}">
+        <h2>Calculation Result:</h2>
+        <p th:text="${result}"></p>
+    </div>
+    </div>
+</body>
+</html>

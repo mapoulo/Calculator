@@ -1,0 +1,187 @@
+package com.example.demo.Controllers;
+
+import java.io.File;
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.util.List;
+import java.util.Stack;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.multipart.MultipartFile;
+
+import com.example.demo.Models.User;
+import com.example.demo.Services.UserService;
+
+
+@Controller
+public class UploadController {
+
+	 public User user;
+	 
+	
+     @Autowired
+     private UserService userService;
+	  
+	  @RequestMapping("/")
+	  public String index() {
+		  return "index";
+	  }
+	  
+	  @RequestMapping("/register")
+	  public String openRegisterPage() {
+		  return "register";
+	  }
+	  
+	  @RequestMapping("/homepage")
+	  public String openRegisterPsage() {
+		  return "homepage";
+	  }
+	  
+	  @RequestMapping("/advanced")
+	  public String advanced() {
+		  return "advanced-calculate";
+	  }
+	  
+	    @PostMapping("/home")
+	    public String login(@RequestParam String username, @RequestParam String password, Model model) {
+	        this.user = userService.findRegisteredUserByUserName(username);
+		  if(this.user != null && this.user.getPassword().equals(password)){
+			  return "homepage";
+		  }else {
+			  model.addAttribute("message", "The username and/or password you specified are not correct.");
+			  return "index";
+		  }    
+	    	
+	    	
+	    }
+	  
+	  
+	  @PostMapping("/register")
+	    public String processRegistration(@RequestParam String username, @RequestParam String password, Model model) {
+	        
+		  userService.processRegistration(username, password);
+ 	      model.addAttribute("message", "Registration successful. Welcome, " + username + "!");
+          this.user.setUsername(username);
+	        return "homepage"; 
+	    }
+	  
+	  
+	  
+	  @PostMapping("/performCalculation")
+	    public String performCalculation(
+	            @RequestParam double operand1,
+	            @RequestParam double operand2,
+	            @RequestParam String operator,
+	            Model model) {
+
+	        double result = calculateResult(operand1, operand2, operator);
+	        model.addAttribute("result", result);
+
+	        return "homepage";
+	    }
+
+	    private double calculateResult(double operand1, double operand2, String operator) {
+	        // Perform the calculation based on the operator
+	        switch (operator) {
+	            case "+":
+	                return operand1 + operand2;
+	            case "-":
+	                return operand1 - operand2;
+	            case "*":
+	                return operand1 * operand2;
+	            case "/":
+	                if (operand2 != 0) {
+	                    return operand1 / operand2;
+	                } else {
+	                    // Handle division by zero error
+	                    return Double.NaN;
+	                }
+	            default:
+	                // Handle unsupported operator error
+	                return Double.NaN;
+	        }
+	    }
+	  
+	  
+	    
+	    @PostMapping("/advanced-calculate")
+	    public String evaluateExpression(@RequestParam String expression, Model model) {
+	        double result = evaluate(expression);
+	        model.addAttribute("result", result);
+	        return "advanced-calculate"; // Return back to the advanced calculation page with the result displayed
+	    }
+
+	    private double evaluate(String expression) {
+	        // Implement your custom expression evaluation logic here
+	        // For demonstration purposes, let's use a simple split and evaluate approach
+	        
+	        String[] tokens = expression.split(" ");
+	        Stack<Double> values = new Stack<>();
+	        Stack<String> operators = new Stack<>();
+	        
+	        for (String token : tokens) {
+	            if (token.matches("[0-9.]+")) {
+	                values.push(Double.parseDouble(token));
+	            } else if (token.equals("(")) {
+	                operators.push(token);
+	            } else if (token.equals(")")) {
+	                while (!operators.peek().equals("(")) {
+	                    values.push(applyOperator(operators.pop(), values.pop(), values.pop()));
+	                }
+	                operators.pop(); // Remove "("
+	            } else if (isOperator(token)) {
+	                while (!operators.isEmpty() && hasHigherPrecedence(token, operators.peek())) {
+	                    values.push(applyOperator(operators.pop(), values.pop(), values.pop()));
+	                }
+	                operators.push(token);
+	            }
+	        }
+	        
+	        while (!operators.isEmpty()) {
+	            values.push(applyOperator(operators.pop(), values.pop(), values.pop()));
+	        }
+	        
+	        return values.pop();
+	    }
+
+	    private boolean isOperator(String token) {
+	        return token.equals("+") || token.equals("-") || token.equals("*") || token.equals("/");
+	    }
+
+	    private boolean hasHigherPrecedence(String op1, String op2) {
+	        int prec1 = getPrecedence(op1);
+	        int prec2 = getPrecedence(op2);
+	        return prec1 > prec2 || (prec1 == prec2 && (op1.equals("*") || op1.equals("/")));
+	    }
+
+	    private int getPrecedence(String operator) {
+	        if (operator.equals("+") || operator.equals("-")) return 1;
+	        if (operator.equals("*") || operator.equals("/")) return 2;
+	        return 0;
+	    }
+
+	    private double applyOperator(String operator, double b, double a) {
+	        switch (operator) {
+	            case "+": return a + b;
+	            case "-": return a - b;
+	            case "*": return a * b;
+	            case "/": return a / b;
+	            // Add other operators here if needed
+	            default: return 0;
+	        }
+	    }
+	
+	  
+	  
+
+
+}

@@ -1,0 +1,49 @@
+2023-08-27 14:33:05,694 [Worker-2: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2023-08-27 14:33:13,009 [Worker-6: Updating Maven Dependencies] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.example:Uploadproject:0.0.1-SNAPSHOT @ D:\Java\UploadProject\Uploadproject\pom.xml.
+2023-08-27 14:33:13,168 [Worker-11: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.example:Uploadproject:0.0.1-SNAPSHOT @ D:\Java\UploadProject\Uploadproject\pom.xml.
+2023-08-27 14:33:16,946 [Worker-4: Updating Maven Project] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update started
+2023-08-27 14:33:17,191 [Worker-4: Updating Maven Project] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.example:Uploadproject:0.0.1-SNAPSHOT @ D:\Java\UploadProject\Uploadproject\pom.xml.
+2023-08-27 14:33:17,827 [Worker-4: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /Uploadproject/src/main/java
+2023-08-27 14:33:17,829 [Worker-4: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /Uploadproject/src/main/resources
+2023-08-27 14:33:17,829 [Worker-4: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /Uploadproject/src/main/resources
+2023-08-27 14:33:17,830 [Worker-4: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /Uploadproject/src/test/java
+2023-08-27 14:33:18,198 [Worker-4: Updating Maven Project] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update completed for 1 poms: local refresh takes 0,00 sec, refresh facades takes 0,00 sec, update config takes 0,00 sec 
+2023-08-27 14:33:18,375 [Worker-0: Updating Maven Dependencies] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.example:Uploadproject:0.0.1-SNAPSHOT @ D:\Java\UploadProject\Uploadproject\pom.xml.
+2023-08-27 14:33:19,380 [Worker-2: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-08-27 14:33:19,403 [Worker-2: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-08-27 14:33:19,435 [Worker-2: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\Java\UploadProject\Uploadproject\src\test\resources
+2023-08-27 15:56:53,834 [Worker-6: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-08-27 15:56:53,835 [Worker-6: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-08-27 15:56:53,839 [Worker-6: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\Java\UploadProject\Uploadproject\src\test\resources
+2023-08-27 15:57:16,644 [Worker-6: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-08-27 15:57:16,644 [Worker-6: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-08-27 15:57:16,647 [Worker-6: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\Java\UploadProject\Uploadproject\src\test\resources
+2023-08-27 15:59:13,569 [Worker-24: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-08-27 15:59:13,570 [Worker-24: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-08-27 15:59:13,572 [Worker-24: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\Java\UploadProject\Uploadproject\src\test\resources
+2023-08-27 16:02:42,951 [Worker-30: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-08-27 16:02:42,951 [Worker-30: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-08-27 16:02:42,954 [Worker-30: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\Java\UploadProject\Uploadproject\src\test\resources
+2023-08-27 16:02:54,147 [Worker-17: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-08-27 16:02:54,147 [Worker-17: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-08-27 16:02:54,150 [Worker-17: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\Java\UploadProject\Uploadproject\src\test\resources
+2023-08-27 16:04:31,867 [Worker-31: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-08-27 16:04:31,867 [Worker-31: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-08-27 16:04:31,871 [Worker-31: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\Java\UploadProject\Uploadproject\src\test\resources
+2023-08-27 16:06:26,172 [Worker-34: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-08-27 16:06:26,292 [Worker-34: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 2 resources
+2023-08-27 16:06:26,295 [Worker-34: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\Java\UploadProject\Uploadproject\src\test\resources
+2023-08-27 16:07:36,422 [Worker-42: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.example:Uploadproject:0.0.1-SNAPSHOT @ D:\Java\UploadProject\Calculator\pom.xml.
+2023-08-27 16:07:36,768 [Worker-42: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-08-27 16:07:36,781 [Worker-42: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 2 resources
+2023-08-27 16:07:36,786 [Worker-42: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\Java\UploadProject\Calculator\src\test\resources
+2023-08-27 16:08:11,844 [Worker-37: Updating Maven Project] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update started
+2023-08-27 16:08:11,967 [Worker-37: Updating Maven Project] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.example:Uploadproject:0.0.1-SNAPSHOT @ D:\Java\UploadProject\Calculator\pom.xml.
+2023-08-27 16:08:12,187 [Worker-37: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /Calculator/src/main/java
+2023-08-27 16:08:12,187 [Worker-37: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /Calculator/src/main/resources
+2023-08-27 16:08:12,187 [Worker-37: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /Calculator/src/main/resources
+2023-08-27 16:08:12,187 [Worker-37: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /Calculator/src/test/java
+2023-08-27 16:08:12,344 [Worker-37: Updating Maven Project] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update completed for 1 poms: local refresh takes 0,00 sec, refresh facades takes 0,00 sec, update config takes 0,00 sec 
+2023-08-27 16:08:12,581 [Worker-17: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-08-27 16:08:12,589 [Worker-17: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 2 resources
+2023-08-27 16:08:12,594 [Worker-17: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\Java\UploadProject\Calculator\src\test\resources

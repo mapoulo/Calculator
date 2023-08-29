@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Audit Log</title>
+</head>
+<body>
+    <h1>Audit Log</h1>
+
+   <form method="post" th:action="@{/audit-log}">
+    <label for="username">Username</label>
+    <input type="text" id="username" name="username" required>
+    
+    
+    
+    <button type="submit" class="login-btn">View</button>
+</form>
+
+
+    <table>
+        <tr>
+            <th>Username</th>
+            <th>Timestamp</th>
+        </tr>
+        <tr th:each="entry : ${auditLogEntries}">
+            <td th:text="${entry.username}"></td>
+            <td th:text="${entry.timestamp}"></td>
+        </tr>
+    </table>
+</body>
+</html>

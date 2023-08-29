@@ -1,0 +1,8 @@
+package com.example.demo.POJO;
+
+import lombok.Data;
+
+@Data
+public class AuditLogEntry {
+
+}

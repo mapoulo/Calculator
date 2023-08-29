@@ -1,0 +1,14 @@
+package com.example.demo.POJO;
+
+import java.util.Date;
+
+import lombok.Data;
+
+@Data
+public class AuditLogEntry {
+	
+	    private String username;
+	    private Date fromDate;
+	    private Date toDate;
+
+}
